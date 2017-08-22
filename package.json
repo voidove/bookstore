@@ -1,0 +1,43 @@
+{
+  "name": "bookstore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --output-style compressed -o build/styles/ app/",
+    "autoprefixer": "postcss -u autoprefixer -r build/styles/**/*.css",
+    "eslint": "eslint -c .eslintrc.json app/**/*.js",
+    "build:css": "npm run scss && npm run autoprefixer",
+    "build:js": "npm run eslint",
+    "build": "npm run build:js && npm run build:css",
+    "watch:css": "watch 'npm run build:css' app/",
+    "watch:js": "watch 'npm run build:js' app/",
+    "build:watch": "parallelshell 'npm run watch:js' 'npm run watch:css'",
+    "livereload": "live-reload --port 3001 build/",
+    "clean": "rm -r build/*",
+    "dev": "parallelshell 'npm start' 'npm run build:watch' 'npm run livereload'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "latest",
+    "clean": "latest",
+    "eslint": "latest",
+    "eslint-config-airbnb-base": "latest",
+    "eslint-plugin-import": "latest",
+    "live-reload": "latest",
+    "parallelshell": "latest",
+    "postcss-cli": "latest",
+    "watch": "latest"
+  },
+  "dependencies": {
+    "bootstrap": "latest",
+    "express": "latest",
+    "jquery": "latest",
+    "lodash": "latest",
+    "mustache": "latest"
+  }
+}
