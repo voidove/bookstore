@@ -1,5 +1,3 @@
-var app = app || {};
-
-$(function () {
-	app.booksModule.initModules();
+require(['jquery', 'lodash', 'books/books-module'], function ($, _, booksModule) {
+	booksModule.init();
 });

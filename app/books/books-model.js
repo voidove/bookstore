@@ -1,4 +1,5 @@
-booksModule.model = (function ($) {
+
+define([], function () {
 	var URLS = {
 			FETCH: '/mock/bookstore.json'
 		},
@@ -43,7 +44,7 @@ booksModule.model = (function ($) {
 
 
 	return booksModel;
-})(jQuery);
+});
 
 
 

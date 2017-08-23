@@ -1,16 +1,15 @@
 
-booksModule.controller = (function () {
-
+define(['books/books-model', 'books/books-view', 'mustache'], function (booksModel, booksView, Mustache) {
 	return {
 		init: function () {
 			var dataList = {};
-			var template = booksModule.view.listTemp;
+			var template = booksView.listTemp;
 
-			booksModule.model.getBookItems().done(function (data) {
+			booksModel.getBookItems().done(function (data) {
 				dataList['datalist'] = data;
 				var output = Mustache.render(template, dataList);
 				$('#books-wrapper').append(output);
 			});
 		}
 	}
-})();
+});

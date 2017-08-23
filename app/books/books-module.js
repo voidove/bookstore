@@ -1,9 +1,6 @@
-var booksModule = booksModule || {};
 
-app.booksModule = (function () {
+define(['books/books-controller'], function (booksController) {
 	return {
-		initModules: function () {
-			booksModule.controller.init();
-		}
-	}
-})();
+		init: booksController.init
+	};
+});

@@ -1,5 +1,5 @@
 
-booksModule.view = (function () {
+define([], function () {
 	return {
 		listTemp: '<table class="table">' +
 		'<tbody>{{#datalist}}<tr>' +
@@ -11,6 +11,5 @@ booksModule.view = (function () {
 		'</td>{{/datalist}}</tbody>' +
 		'</table>'
 	}
-
-})();
+});
 
