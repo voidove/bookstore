@@ -10,6 +10,6 @@ $ npm install
 # start
 $ npm run dev
 ```
-go to `http://localhost:3000` in your browser, if port`3000` is available.
+go to `http://localhost:8080` in your browser, if port `8080` is available.
 
 ## Reference

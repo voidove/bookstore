@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "http-server --silent -c-1",
     "test": "echo \"Error: no test specified\" && exit 1",
     "scss": "node-sass --output-style compressed -o build/styles/ app/",
     "autoprefixer": "postcss -u autoprefixer -r build/styles/**/*.css",
@@ -28,6 +28,7 @@
     "eslint": "latest",
     "eslint-config-airbnb-base": "latest",
     "eslint-plugin-import": "latest",
+    "http-server": "latest",
     "live-reload": "latest",
     "parallelshell": "latest",
     "postcss-cli": "latest",
@@ -35,7 +36,6 @@
   },
   "dependencies": {
     "bootstrap": "latest",
-    "express": "latest",
     "jquery": "latest",
     "lodash": "latest",
     "mustache": "latest"
