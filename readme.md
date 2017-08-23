@@ -1,4 +1,5 @@
-# Bookstore V1.0
+# Bookstore V2.0
+Use requirejs to load mudules, [#74](https://github.com/voidove/jug-jug/issues/74)
 ## Quick start
 ```bash
 # change directory to your app
