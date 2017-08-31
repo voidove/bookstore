@@ -1,6 +1,6 @@
 
-define(['books/books-controller'], function (booksController) {
-	return {
-		init: booksController.init
-	};
-});
+import {init} from './books-controller'
+
+var initial = init;
+
+export default initial;

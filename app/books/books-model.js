@@ -1,10 +1,11 @@
 
-define([], function () {
-	var URLS = {
+
+var URLS = {
 			FETCH: '/mock/bookstore.json'
 		},
-		bookItems,
-		booksModel = this;
+		bookItems;
+
+	var booksModel = {};
 
 	function extract(result) {
 		return result.data;
@@ -42,9 +43,7 @@ define([], function () {
 		});
 	};
 
-
-	return booksModel;
-});
+ export default booksModel;
 
 
 

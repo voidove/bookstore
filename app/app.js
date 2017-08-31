@@ -1,3 +1,4 @@
-require(['jquery', 'lodash', 'books/books-module'], function ($, _, booksModule) {
-	booksModule.init();
-});
+import initial from './books/books-module';
+
+initial();
+

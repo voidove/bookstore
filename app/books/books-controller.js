@@ -1,15 +1,16 @@
 
-define(['books/books-model', 'books/books-view', 'mustache'], function (booksModel, booksView, Mustache) {
-	return {
-		init: function () {
-			var dataList = {};
-			var template = booksView.listTemp;
+import booksModel from './books-model';
+import listTemp from './books-view';
 
-			booksModel.getBookItems().done(function (data) {
-				dataList['datalist'] = data;
-				var output = Mustache.render(template, dataList);
-				$('#books-wrapper').append(output);
-			});
-		}
-	}
-});
+function init() {
+	var dataList = {};
+	var template = listTemp();
+
+	booksModel.getBookItems().done(function (data) {
+		dataList['datalist'] = data;
+		var output = Mustache.render(template, dataList);
+		$('#books-wrapper').append(output);
+	});
+}
+
+export {init};

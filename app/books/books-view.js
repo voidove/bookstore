@@ -1,7 +1,5 @@
-
-define([], function () {
-	return {
-		listTemp: '<table class="table">' +
+export default function listTemp() {
+	return '<table class="table">' +
 		'<tbody>{{#datalist}}<tr>' +
 		'<td>{{id}}</td>' +
 		'<td>{{name}}</td>' +
@@ -10,6 +8,5 @@ define([], function () {
 		'<td>{{level}}</td>' +
 		'</td>{{/datalist}}</tbody>' +
 		'</table>'
-	}
-});
+}
 
